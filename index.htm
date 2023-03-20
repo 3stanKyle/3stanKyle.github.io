@@ -9,6 +9,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
     <style>
+      .hero-section {
+  position: relative;
+  text-align: center;
+}
+
+.hero-section img {
+  width: 100%;
+  display: block;
+}
+
+.participate-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff06ac;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  border-radius: 50px;
+  padding: 24px 56px;
+  cursor: pointer;
+  font-size: 2.4em;
+  transition: all 0.3s;
+  display: flex;                /* Add this line */
+  justify-content: center;      /* Add this line */
+  align-items: center;          /* Add this line */
+}
+
+.participate-button:hover {
+  background-color: #e600a0;
+}
       body {
         font-family: 'Inter', sans-serif;
         margin: 0;
@@ -105,6 +137,10 @@
     </style>
 </head>
 <body>
+  <div class="hero-section">
+    <img src="https://newsabalita.files.wordpress.com/2023/03/hero-bg.jpg" alt="Hero Background">
+    <button class="participate-button">PARTICIPATE NOW</button>
+  </div>
   <section class="promo-section">
     <div class="container">
       <h1 class="headline">WIN A HOLIDAY TRIP FOR 2 IN BALI’S<br>MOST VIBRANT NEIGHBORHOOD</h1>
