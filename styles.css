@@ -1,4 +1,42 @@
-      .hero-section {
+.navbar {
+  background-color: #252525;
+  height: 96px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.logo {
+  /* Add your logo styles here */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.menu a:hover {
+  color: #ff06ac;
+}
+
+.hero-section {
   position: relative;
   text-align: center;
 }
