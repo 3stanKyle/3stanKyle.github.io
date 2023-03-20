@@ -1,0 +1,227 @@
+      .hero-section {
+  position: relative;
+  text-align: center;
+}
+
+.hero-section img {
+  width: 100%;
+  display: block;
+}
+
+.participate-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff06ac;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  border-radius: 50px;
+  padding: 24px 56px;
+  cursor: pointer;
+  font-size: 2.4em;
+  transition: all 0.3s;
+  display: flex;                /* Add this line */
+  justify-content: center;      /* Add this line */
+  align-items: center;          /* Add this line */
+}
+
+.participate-button:hover {
+  background-color: #e600a0;
+}
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .promo-section {
+        background-image: linear-gradient(to bottom, #feab09, #f83600, #fb1579);
+        padding: 50px 0;
+        text-align: center;
+      }
+    
+      .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    
+      .headline {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 20px;
+      }
+    
+      .subheadline {
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 30px;
+      }
+    
+      .box-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    
+      .box {
+        background-color: #252525;
+        flex-basis: 285px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        color: white;
+        text-align: left;
+        overflow: hidden;
+      }
+    
+      .box img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 20px;
+        display: block;
+      }
+    
+      .box img:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+      }
+    
+      .box-content {
+        padding: 20px;
+      }
+    
+      .box h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+    
+      .box hr {
+        border: 0;
+        border-top: 1px solid #fb1579;
+        width: 15%;
+        margin: 0;
+        margin-inline-start: 0;
+        margin-bottom: 10px;
+      }
+    
+      .box p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+    
+      .note {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .gift-card-section {
+  background-image: url('https://newsabalita.files.wordpress.com/2023/03/gift-card-section_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0; /* Adjust padding as needed */
+  text-align: center;
+}
+
+.gift-card-headline {
+  /* Use the same styles as the promo section headline */
+  /* Example: */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.4em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.gift-card-section img {
+  max-width: 100%; /* Make sure the image is responsive */
+  height: auto;
+}
+
+.points-section {
+  background-color: #0d49d4;
+  padding: 50px 0; /* Adjust padding as needed */
+  text-align: center;
+}
+
+.headline {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.8em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.white-box {
+  background-color: #ffffff;
+  width: 276px;
+  min-height: 568px;
+  margin-bottom: 20px;
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.product-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #252525;
+  font-size: 13pt;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  color: #111111;
+  font-weight: 400;
+  font-size: 10pt;
+  text-align: center;
+}
+
+.inside-image {
+  width: auto; /* Set the image width to 100% of the white-box width */
+  height: auto; /* Maintain the image aspect ratio */
+}
+
+.buy-now {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff06ac;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.3s;
+  width: 90%;
+  height: 50px;
+}
