@@ -1,19 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <header class="navbar">
-    <div class="navbar-container">
-      <a href="#" class="logo">
-        <img src="https://newsabalita.files.wordpress.com/2023/03/ubiquiti-leader-logo.png" alt="Ubiquiti Leader Logo">
-      </a>
-      <nav class="menu">
-        <a href="#promo-section">EXPERIENCE</a>
-        <a href="#gift-card-section">BONUS</a>
-        <a href="#points-section-1">2-3 POINTS</a>
-        <a href="#points-section-2">5 POINTS</a>
-        <a href="#points-section-3">15 POINTS</a>
-      </nav>
-    </div>
-  </header>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +11,34 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo">
+        <img src="https://newsabalita.files.wordpress.com/2023/03/ubiquiti-leader-logo.png" alt="Ubiquiti Leader Logo">
+      </a>
+      <nav class="menu" id="menu">
+        <a href="#promo-section">EXPERIENCE</a>
+        <a href="#gift-card-section">BONUS</a>
+        <a href="#points-section-1">2-3 POINTS</a>
+        <a href="#points-section-2">5 POINTS</a>
+        <a href="#points-section-3">15 POINTS</a>
+        <a href="https://www.leadersystems.com.au/categories.html?Wh59i57VJP0=/feNMm0AjUbBFi1mVToudQ==2mVRAGg5tuzsGIAcP/Jf2N3LIsbnnpHFPTWJqqGjm1Ve31ifqOIW1qqBemEaT85OIon/Q0qt5C8326aC6CVNNihAZiRzYeEkBbkrOea4PuaF9OnsTG3VzXGo" class="participate-btn">PARTICIPATE NOW</a>
+      </nav>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      const hamburger = document.getElementById('hamburger');
+      menu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+  </script>
   <div class="hero-section">
     <img src="https://newsabalita.files.wordpress.com/2023/03/hero-bg.jpg" alt="Hero Background">
     <a href="https://www.leadersystems.com.au/categories.html?Wh59i57VJP0=/feNMm0AjUbBFi1mVToudQ==2mVRAGg5tuzsGIAcP/Jf2N3LIsbnnpHFPTWJqqGjm1Ve31ifqOIW1qqBemEaT85OIon/Q0qt5C8326aC6CVNNihAZiRzYeEkBbkrOea4PuaF9OnsTG3VzXGo" class="button-link">
