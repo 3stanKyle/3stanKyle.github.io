@@ -56,8 +56,8 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 20px;
+  width: 32px;
+  height: 24px;
   cursor: pointer;
 }
 
@@ -65,7 +65,7 @@
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #fff;
+  background-color: #0061ff;
 }
 
 @media (max-width: 768px) {
@@ -271,6 +271,11 @@
   border-radius: 4px;
 }
 
+.inside-image {
+  width: auto; /* Set the image width to 100% of the white-box width */
+  height: auto; /* Maintain the image aspect ratio */
+}
+
 .text-container {
   display: flex;
   flex-direction: column;
@@ -296,11 +301,6 @@
   text-align: center;
 }
 
-.inside-image {
-  width: auto; /* Set the image width to 100% of the white-box width */
-  height: auto; /* Maintain the image aspect ratio */
-}
-
 .buy-now {
   position: absolute;
   bottom: 20px;
@@ -311,10 +311,13 @@
   font-family: 'Josefin Sans', sans-serif;
   border: none;
   border-radius: 4px;
-  padding: 8px 8px;
   cursor: pointer;
   font-size: 1.2em;
   transition: all 0.3s;
   width: 90%;
   height: 50px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
