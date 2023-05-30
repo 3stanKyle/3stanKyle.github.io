@@ -1,81 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Leader IT Reseller Expo 2023</title>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Internet Plans Carousel</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <style>
+        .carousel {
+            max-width: 1100px;
+            background-color: #fbfbfb;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .carousel .slick-slide {
+            margin: 0 6px;  /* This will create a 12px space between the slides */
+        }
+
+        .carousel img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="container">
-            <img class="navbar-logo" src="https://newsabalita.files.wordpress.com/2023/05/leaderexpo-logo.png">
-            <div class="navbar-menu">
-                <div>BENEFITS</div>
-                <div>SPONSORS</div>
-                <div>VENUES</div>
-                <div>AGENDA</div>
-            </div>
-            <button class="register-button">REGISTER NOW</button>
-        </div>
+    <h1>Choose your Breeze nbn™ plan</h1>
+    <div class="carousel">
+        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-1.png" alt="Plan 1"></div>
+        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-2.png" alt="Plan 2"></div>
+        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-3.png" alt="Plan 3"></div>
+        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-4.png" alt="Plan 4"></div>
+        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-5.png" alt="Plan 5"></div>
+        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-6.png" alt="Plan 6"></div>
+        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-7.png" alt="Plan 7"></div>
+        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-8.png" alt="Plan 8"></div>
     </div>
-    <div class="hero">
-        <div class="container">
-            <div class="hero-content"> <!-- new container for expo image and hero button -->
-                <img class="expo-image" src="https://newsabalita.files.wordpress.com/2023/05/expo2023.png">
-                <button class="hero-button">REGISTER NOW</button>
-            </div>
-            <div class="locations">
-                <!-- Repeat the following div for each location -->
-                <div class="location-card">
-                    <div>Tuesday, 22.08.2023</div>
-                    <div class="location-name">PERTH</div>
-                    <div>Crown Perth</div>
-                </div>
-                <div class="location-card">
-                    <div>Tuesday, 7.09.2023</div>
-                    <div class="location-name">SYDNEY</div>
-                    <div>Commbank Stadium</div>
-                </div>
-                <div class="location-card">
-                    <div>Tuesday, 12.09.2023</div>
-                    <div class="location-name">MELBOURNE</div>
-                    <div>Marvel Stadium</div>
-                </div>
-                <div class="location-card">
-                    <div>Tuesday, 17.10.2023</div>
-                    <div class="location-name">ADELAIDE</div>
-                    <div>Adelaide Convention<br>Centre</div>
-                </div>
-                <div class="location-card">
-                    <div>Tuesday, 25.10.2023</div>
-                    <div class="location-name">BRISBANE</div>
-                    <div>Brisbane Convention &<br>Exhibition Centre</div>
-                </div>
-                <!-- ... -->
-            </div>
-        </div>
-    </div>
-    <section class="timeline-section">
-        <h1 class="timeline-title">SEMINAR SCHEDULE</h1>
-        <p class="timeline-description">Experience unparalleled enrichment at Leader EXPO 2023 with our most impressive seminar lineup to date. Immerse yourself in a wealth of knowledge and insights, specifically tailored to fuel your business's growth.</p>
-        <div class="timeline-container">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/1t-2.png" alt="Image 1">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/2t-2.png" alt="Image 2">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/3t-2.png" alt="Image 3">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/4t-4.png" alt="Image 4">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/5t-2.png" alt="Image 5">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/6t-3.png" alt="Image 6">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/7t-2.png" alt="Image 7">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/8t-2.png" alt="Image 8">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/9t-3.png" alt="Image 9">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/10t-2.png" alt="Image 10">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/11t-3.png" alt="Image 11">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/12t-2.png" alt="Image 12">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/13t-2.png" alt="Image 13">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/14t-2.png" alt="Image 14">
-            <img class="timeline-image" src="https://newsabalita.files.wordpress.com/2023/05/15t-3.png" alt="Image 15">
-        </div>
-        <div class="timeline-background"></div>
-    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                slidesToShow: 4,
+                draggable: true
+            });
+        });
+    </script>
 </body>
 </html>
