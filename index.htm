@@ -1,56 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Internet Plans Carousel</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        .carousel {
-            max-width: 1100px;
-            background-color: #fbfbfb;
-            margin: auto;
-            padding: 20px 0;
+        body {
+            background-color: #03335d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Rubik', sans-serif;
+            color: white;
         }
 
-        .carousel .slick-slide {
-            margin: 0 6px;  /* This will create a 12px space between the slides */
+        .container {
+            width: 400px;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
         }
 
-        .carousel img {
-            width: 100%;
-            border-radius: 15px;
+        img {
+            display: block;
+            margin: 0 auto 20px auto;
         }
 
         h1 {
-            text-align: center;
-            color: #333;
-            font-family: Arial, sans-serif;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            text-align: left;
             margin-bottom: 20px;
         }
+
+        h2 {
+            text-align: left;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        input[type="password"], button {
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 48px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        input[type="password"] {
+            border: 1px solid #659bc9;
+            color: #555555;
+            background-color: white;
+        }
+
+        button {
+            border: none;
+            background-color: grey;
+            color: white;
+            cursor: not-allowed;
+        }
+
+        button.active {
+            background-color: #6eb550;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+        }
+
+        .tick-box {
+            width: 16px;
+            height: 16px;
+            border: 1px solid grey;
+            border-radius: 25%;
+            margin-right: 10px;
+            margin-bottom: 2px;
+            position: relative;
+        }
+
+        .tick-box.checked {
+            border-color: #AAFF00;
+        }
+
+        .tick-box.checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #AAFF00;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Choose your Breeze nbn™ plan</h1>
-    <div class="carousel">
-        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-1.png" alt="Plan 1"></div>
-        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-2.png" alt="Plan 2"></div>
-        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-3.png" alt="Plan 3"></div>
-        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-4.png" alt="Plan 4"></div>
-        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-5.png" alt="Plan 5"></div>
-        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-6.png" alt="Plan 6"></div>
-        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-7.png" alt="Plan 7"></div>
-        <div><img src="https://newsabalita.files.wordpress.com/2023/05/plan-8.png" alt="Plan 8"></div>
+    <div class="container">
+        <img src="http://dealershop.leadersystems.com.au/img/LEADER%20LOGO_login_page.png" alt="Leader Logo" width="175">
+        <h1>Change your Password</h1>
+        <p>Once you submit your new password, the two-factor authentication will be implemented for you to be able to continue logging in the dealershop. You will be asked to scan a QR code using your mobile phone via the Microsoft Authenticator app.</p>
+        <p>Alternatively, there would be an sms option to which we will send an OTP code to your nominated mobile phone number registered in our official partner database.</p>
+        <h2>Password Requirements:</h2>
+        <ul id="passwordCriteria">
+            <li><div class="tick-box" id="minLength"></div> Minimum 12 Characters</li>
+            <li><div class="tick-box" id="hasSymbol"></div> Symbols</li>
+            <li><div class="tick-box" id="hasNumber"></div> Numbers</li>
+            <li><div class="tick-box" id="hasLowercase"></div> Lowercase Letters</li>
+            <li><div class="tick-box" id="hasUppercase"></div> Uppercase Letters</li>
+        </ul>
+        <input type="password" id="newPassword" placeholder="New Password">
+        <input type="password" id="confirmPassword" placeholder="Confirm New Password">
+        <button id="submitBtn" disabled>Submit</button>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.carousel').slick({
-                slidesToShow: 4,
-                draggable: true
-            });
+        const newPassword = document.getElementById('newPassword');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const submitBtn = document.getElementById('submitBtn');
+        const criteria = {
+            minLength: document.getElementById('minLength'),
+            hasSymbol: document.getElementById('hasSymbol'),
+            hasNumber: document.getElementById('hasNumber'),
+            hasLowercase: document.getElementById('hasLowercase'),
+            hasUppercase: document.getElementById('hasUppercase')
+        };
+
+        function validatePassword(password) {
+            return {
+                minLength: password.length >= 12,
+                hasSymbol: /[!@#$%^&*(),.?":{}|<>]/.test(password),
+                hasNumber: /\d/.test(password),
+                hasLowercase: /[a-z]/.test(password),
+                hasUppercase: /[A-Z]/.test(password)
+            };
+        }
+
+        function updateUI(validations) {
+            for (let criterion in validations) {
+                if (validations[criterion]) {
+                    criteria[criterion].classList.add('checked');
+                } else {
+                    criteria[criterion].classList.remove('checked');
+                }
+            }
+
+            if (newPassword.value === confirmPassword.value && Object.values(validations).every(val => val)) {
+                submitBtn.disabled = false;
+                submitBtn.classList.add('active');
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.classList.remove('active');
+            }
+        }
+
+        newPassword.addEventListener('input', () => {
+            const validations = validatePassword(newPassword.value);
+            updateUI(validations);
         });
+
+        confirmPassword.addEventListener('input', () => {
+            const validations = validatePassword(newPassword.value);
+            updateUI(validations);
+        });
+
     </script>
 </body>
 </html>
