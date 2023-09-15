@@ -48,20 +48,6 @@
             margin-bottom: 10px;
         }
 
-        .example-text {
-            font-size: 14px;
-            margin-bottom: 10px;
-            text-align: left;
-            color: white;
-        }
-
-        .example-text span {
-            color: #AAFF00;
-            font-weight:500;
-            font-size: 20px;
-            user-select: none;
-        }
-
         input[type="password"], button {
             width: 100%;
             box-sizing: border-box;
@@ -130,7 +116,6 @@
         <img src="https://newsabalita.files.wordpress.com/2023/09/leader_logo.png" alt="Leader Logo" width="360">
         <h1>Change your Password</h1>
         <p>Once you submit your new password, the two-factor authentication will be implemented for you to be able to continue logging in the dealershop. You will be asked to scan a QR code using your mobile phone via the Microsoft Authenticator app.</p>
-        <p>Alternatively, there would be an sms option to which we will send an OTP code to your nominated mobile phone number registered in our official partner database.</p>
         <h2>Password Requirements:</h2>
         <ul id="passwordCriteria">
             <li><div class="tick-box" id="minLength"></div> Minimum 12 Characters</li>
@@ -139,10 +124,9 @@
             <li><div class="tick-box" id="hasLowercase"></div> Lowercase Letters</li>
             <li><div class="tick-box" id="hasUppercase"></div> Uppercase Letters</li>
         </ul>
-        <p class="example-text">Strong Password Example: <span>MV=6j$R/*zX!</span></p>
         <input type="password" id="newPassword" placeholder="New Password">
         <input type="password" id="confirmPassword" placeholder="Confirm New Password">
-        <button id="submitBtn" disabled>Submit</button>
+        <button id="submitBtn" disabled>Submit New Password</button>
     </div>
 
     <script>
