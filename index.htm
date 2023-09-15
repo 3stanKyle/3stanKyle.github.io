@@ -10,7 +10,7 @@
             background-color: #03335d;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
             font-family: 'Rubik', sans-serif;
             color: white;
@@ -61,6 +61,26 @@
             border: 1px solid #659bc9;
             color: #555555;
             background-color: white;
+        }
+
+        .password-strength {
+            height: 8px;
+            background-color: #012748;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        #strengthBar {
+            height: 100%;
+            width: 0%;
+            background-color: grey;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        #strengthText {
+            font-size: 14px;
+            margin-bottom: 10px;
         }
 
         button {
@@ -116,7 +136,7 @@
         <img src="https://newsabalita.files.wordpress.com/2023/09/leader_logo.png" alt="Leader Logo" width="360">
         <h1>Change your Password</h1>
         <p>Once you submit your new password, the two-factor authentication will be implemented for you to be able to continue logging in the dealershop. You will be asked to scan a QR code using your mobile phone via the Microsoft Authenticator app.</p>
-        <h2>Password Requirements:</h2>
+        <h2>Strong Password Requirements:</h2>
         <ul id="passwordCriteria">
             <li><div class="tick-box" id="minLength"></div> Minimum 12 Characters</li>
             <li><div class="tick-box" id="hasSymbol"></div> Symbols</li>
@@ -124,6 +144,10 @@
             <li><div class="tick-box" id="hasLowercase"></div> Lowercase Letters</li>
             <li><div class="tick-box" id="hasUppercase"></div> Uppercase Letters</li>
         </ul>
+        <div class="password-strength">
+            <div id="strengthBar"></div>
+        </div>
+        <p id="strengthText"></p>
         <input type="password" id="newPassword" placeholder="New Password">
         <input type="password" id="confirmPassword" placeholder="Confirm New Password">
         <button id="submitBtn" disabled>Submit New Password</button>
@@ -169,9 +193,47 @@
             }
         }
 
+        function updateStrength(password) {
+            const strengthMeter = document.getElementById('strengthBar');
+            const strengthText = document.getElementById('strengthText');
+            let score = 0;
+
+            if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) score++;
+            if (/\d/.test(password)) score++;
+            if (/[a-z]/.test(password)) score++;
+            if (/[A-Z]/.test(password)) score++;
+            if (password.length >= 12) score++;
+
+            switch (score) {
+                case 0:
+                    strengthMeter.style.width = '0%';
+                    strengthMeter.style.backgroundColor = 'red';
+                    strengthText.textContent = '';
+                    break;
+                case 1:
+                case 2:
+                    strengthMeter.style.width = '33%';
+                    strengthMeter.style.backgroundColor = 'red';
+                    strengthText.textContent = 'Weak';
+                    break;
+                case 3:
+                    strengthMeter.style.width = '66%';
+                    strengthMeter.style.backgroundColor = '#abd8ff';
+                    strengthText.textContent = 'Medium';
+                    break;
+                case 4:
+                case 5:
+                    strengthMeter.style.width = '100%';
+                    strengthMeter.style.backgroundColor = '#AAFF00';
+                    strengthText.textContent = 'Strong';
+                    break;
+            }
+        }
+
         newPassword.addEventListener('input', () => {
             const validations = validatePassword(newPassword.value);
             updateUI(validations);
+            updateStrength(newPassword.value);
         });
 
         confirmPassword.addEventListener('input', () => {
