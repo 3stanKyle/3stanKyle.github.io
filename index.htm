@@ -53,7 +53,7 @@
             box-sizing: border-box;
             min-height: 48px;
             border-radius: 4px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             padding: 16px;
         }
 
@@ -144,12 +144,12 @@
             <li><div class="tick-box" id="hasLowercase"></div> Lowercase Letters</li>
             <li><div class="tick-box" id="hasUppercase"></div> Uppercase Letters</li>
         </ul>
+        <input type="password" id="newPassword" placeholder="New Password">
+        <input type="password" id="confirmPassword" placeholder="Confirm New Password">
         <div class="password-strength">
             <div id="strengthBar"></div>
         </div>
         <p id="strengthText"></p>
-        <input type="password" id="newPassword" placeholder="New Password">
-        <input type="password" id="confirmPassword" placeholder="Confirm New Password">
         <button id="submitBtn" disabled>Submit New Password</button>
     </div>
 
@@ -214,18 +214,18 @@
                 case 2:
                     strengthMeter.style.width = '33%';
                     strengthMeter.style.backgroundColor = 'red';
-                    strengthText.textContent = 'Weak';
+                    strengthText.textContent = 'Requirements not met';
                     break;
                 case 3:
                     strengthMeter.style.width = '66%';
                     strengthMeter.style.backgroundColor = '#abd8ff';
-                    strengthText.textContent = 'Medium';
+                    strengthText.textContent = 'Almost there';
                     break;
                 case 4:
                 case 5:
                     strengthMeter.style.width = '100%';
                     strengthMeter.style.backgroundColor = '#AAFF00';
-                    strengthText.textContent = 'Strong';
+                    strengthText.textContent = 'Strong Password';
                     break;
             }
         }
