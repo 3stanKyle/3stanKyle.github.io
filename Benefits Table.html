@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits Table</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>PARTNER PROGRAM BENEFITS</th>
+                <th>PLATINUM</th>
+                <th>GOLD</th>
+                <th>PREFERRED</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="benefit-title">Melbourne F1 Grand Prix 2024</td>
+                <td class="benefit-detail">2 day VIP Experience including flights and accommodation (must achieve Platinum status for 2 consecutive quarters)</td>
+                <td class="benefit-detail">1 day VIP Experience including flights and accommodation (must achieve Gold status for 2 consecutive quarters)</td>
+                <td class="benefit-detail">Entry into competition and win based on performance</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Exclusive Invite Only Invitation to Canalys 2023 Bangkok</td>
+                <td class="benefit-detail">1x Free invitation including flights and accommodation to Bangkok (worth $7K)</td>
+                <td class="benefit-detail">Top 10 Gold 1x Return Economy Class Flights and Accommodation. Remaining partners need to pay for flights and Leader pays for accommodation and event.</td>
+                <td class="benefit-detail">Invitation depending on Canalys</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Leader Bangkok 2023 Partner Event in December (after Canalys)</td>
+                <td class="benefit-detail">1x Return Economy flights and accommodation</td>
+                <td class="benefit-detail">Partner pay flights. Leader pays for accommodation and event.</td>
+                <td class="benefit-detail">Top 10 partners invited. Partners pay for flights and accommodation.</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Fully Funded Vendor Networking / Training Event in any Leader Branch</td>
+                <td class="benefit-detail">2x per quarter vendor EXCLUSIVE for your team and customers in our Leader Training Centre in your state. Vendor of your choice.</td>
+                <td class="benefit-detail">1x per quarter vendor EXCLUSIVE for your team and customers in our Leader Training Centre in your state. Vendor of your choice.</td>
+                <td class="benefit-detail">Once per half per quarter vendor shared for your team and customers in our Leader Training Centre in your state. Vendor of your choice.</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Free Road Freight</td>
+                <td class="benefit-detail">Free Shipping including drop ships any order over $300 ex</td>
+                <td class="benefit-detail">Free Shipping any orders over $500</td>
+                <td class="benefit-detail">Free Shipping any orders over $1,000</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Free Ubiquiti Training Certification (valued at $1,500 each)</td>
+                <td class="benefit-detail">2 per year (if pass)</td>
+                <td class="benefit-detail">1 per year (if pass)</td>
+                <td class="benefit-detail">50% off</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">$9 Airbag any where in Australia with 6pm (EST) cut off from WA</td>
+                <td class="benefit-detail" colspan="3">3KG and below</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Priority Shipping (flagged as priority partner in warehouse)</td>
+                <td class="benefit-detail" colspan="3">4pm cut off out of any warehouse in Australia</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Credit Card Transaction Fee</td>
+                <td class="benefit-detail" colspan="3">FREE (0%) transaction fee Visa/Mastercard for Cloud. Leader DealerShop purchases 1% VISA/Mastercard. 2.2% AMEX.</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Quarterly Leader Catalogues</td>
+                <td class="benefit-detail">1,000 free with your brand printed</td>
+                <td class="benefit-detail">500 free with your brand printed</td>
+                <td class="benefit-detail">250 free with your brand printed</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">White Label Cloud Portal</td>
+                <td class="benefit-detail">FREE installation and 1% transaction fee</td>
+                <td class="benefit-detail">$500 installation and 1.5% transaction fee</td>
+                <td class="benefit-detail">$1,000 installation and 2% transaction fee</td>
+            </tr>
+            <tr>
+                <td class="benefit-title">Service & Support</td>
+                <td class="benefit-detail" colspan="3">FREE pre/post sales support for all Networking, Cloud, Unified Communications, Server & Storage vendors. Free local RA service in 5 states across Austalia</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+    @keyframes fadeInTopToBottom {
+        0% {
+            opacity: 0;
+            transform: translateY(-2px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-in {
+        animation: fadeInTopToBottom .6s forwards;
+    }
+
+    tbody tr {
+        opacity: 0;
+    }
+
+    tbody tr:nth-child(1) { animation-delay: 0.15s; }
+    tbody tr:nth-child(2) { animation-delay: 0.2s; }
+    tbody tr:nth-child(3) { animation-delay: 0.25s; }
+    tbody tr:nth-child(4) { animation-delay: 0.3s; }
+    tbody tr:nth-child(5) { animation-delay: 0.35s; }
+    tbody tr:nth-child(6) { animation-delay: 0.4s; }
+    tbody tr:nth-child(7) { animation-delay: 0.45s; }
+    tbody tr:nth-child(8) { animation-delay: 0.5s; }
+    tbody tr:nth-child(9) { animation-delay: .55s; }
+    tbody tr:nth-child(10) { animation-delay: .6s; }
+    tbody tr:nth-child(11) { animation-delay: .65s; }
+    tbody tr:nth-child(12) { animation-delay: .7s; }
+    /* ... Continue this pattern for as many rows as you have ... */
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const rows = document.querySelectorAll("tbody tr");
+        rows.forEach(row => {
+            row.classList.add("fade-in");
+        });
+    });
+</script>
+
+</body>
+</html>

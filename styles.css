@@ -1,0 +1,75 @@
+@media (max-width: 768px) {
+    .table-container {
+        transform: scale(0.8);
+        transform-origin: center;
+    }
+}
+
+body {
+    background-color: #0d1527;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.table-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: start; /* Aligns items to the top of the container */
+    min-height: 100vh; /* Ensures the container takes up at least the height of the viewport */
+    overflow-y: auto; /* Allows for vertical scrolling if the content is taller than the viewport */
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+th {
+    padding: 8px 16px;
+    text-align: left;
+    letter-spacing: .1em;
+    color: white;
+    background-color: transparent;
+}
+
+th:nth-child(2) {
+    background-color: #768490;
+    text-align: center;
+}
+
+th:nth-child(3) {
+    background-color: #a4862f;
+    text-align: center;
+}
+
+th:nth-child(4) {
+    background-color: #104a74;
+    text-align: center;
+}
+
+.benefit-title {
+    padding: 16px;
+    text-align: left;
+    letter-spacing: .01em;
+    color: #ffffff;
+    background-color: rgba(118, 132, 144, 0.2);
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.benefit-title:hover {
+    background-color: rgba(118, 132, 144, 0.6);
+}
+
+.benefit-detail {
+    padding: 12px;
+    text-align: center;
+    color: #23304c;
+    background-color: white;
+    font-size: 12px;
+}
+
