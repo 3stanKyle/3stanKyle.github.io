@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap');
+
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.navbar {
+    background-color: #a8a190;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-logo {
+    max-height: 42px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #d6c28f;
+}
+
+.nav-button {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #a88b58;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #d6c28f;
+    color: white;
+}
+
+.hero-section {
+    position: relative;
+    background-image: url('https://newsabalita.files.wordpress.com/2023/10/beach-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  /* Align items to the bottom */
+    align-items: center;
+}
+
+.promo-logo {
+    z-index: 2;
+    margin-top: 40px;
+    max-height: 25vh;  /* Adjusted to 25% of the viewport height */
+}
+
+.hero-image {
+    z-index: 1;
+    max-height: 75vh;  /* Adjusted to 75% of the viewport height */
+}
+
+.section-heading {
+    font-size: 40px;
+    font-weight: 400;
+    color: #a88b58;
+    max-width: 1200px;
+    margin: 0 auto; /* Center-align the text within the container */
+    text-align: center; /* Optionally, set the text alignment to left */
+    margin-bottom: 24px; /* Add space below the headline */
+}
+
+.mechanics-section {
+    background-image: linear-gradient(to right, #d6c28f, #a88b58, #d6c28f);
+    text-align: center; /* Center-align the headline */
+    padding: 24px 0; /* Add space around the headline */
+}
+
+.mechanics-heading {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto; /* Center-align the text within the container */
+    text-align: center; /* Optionally, set the text alignment to left */
+    margin-bottom: 24px; /* Add space below the headline */
+}
+
+.mechanics-summary {
+    max-width: 1200px;
+    margin: 0 auto; /* Center-align the text within the container */
+    text-align: center; /* Optionally, set the text alignment to left */
+    font-size: 20px;
+    padding: 0 24px;
+    line-height: 32px;
+    color:#ffffff;
+}
+
+.benefits-section {
+    text-align: center; /* Center-align the headline */
+    padding: 24px 0; /* Add space around the headline */
+}
+
+.benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+    align-items: flex-start; /* Align child elements to the top */
+}
+
+.benefit-summary {
+    max-width: 1136px;
+    margin: 0 auto; /* Center-align the text within the container */
+    text-align: center; /* Optionally, set the text alignment to left */
+    font-size: 14px;
+    padding: 0 24px;
+    line-height: 24px;
+    color:#54534a;
+    margin-bottom: 16px;
+}
+
+.tour-section {
+    background-image: linear-gradient(to right, #d6c28f, #a88b58, #d6c28f); 
+    text-align: center; /* Center-align the headline */
+    padding: 24px 0; /* Add space around the headline */
+}
+
+.tour-heading {
+    font-size: 40px;
+    font-weight: 400;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto; /* Center-align the text within the container */
+    text-align: center; /* Optionally, set the text alignment to left */
+}
+
+.tour-card {
+    flex-basis: calc(50% - 16px);
+    text-align: center;
+    margin: 24px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tour-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.tour-description {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 24px;
+    padding: 0 24px;
+}
+
+.benefits-card {
+    flex-basis: calc(25% - 16px);
+    text-align: center;
+    margin: 24px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.benefit-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.benefit-description {
+    font-size: 18px;
+    color: #a88b58;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 24px;
+    padding: 0 24px;
+}
+
+.product-section {
+    background-color: #f8f9f7;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.mainflexbox-bigproduct {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;  /* gitna ung content */
+}
+
+.image-container {
+    max-width: 600px;
+    padding: 10px;
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.features-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.big-product-name {
+    font-size: 32px;
+    color: #3b4c66;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.big-product-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: #54534a;
+    font-weight: 400;
+    margin: 8px 0 24px 0;
+}
+
+.big-buy-button {
+    background-image: linear-gradient(to right, #d6c28f, #a88b58, #d6c28f);
+    color: white;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.specs-grid {
+    display: flex;
+    gap: 24px 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-group {
+    width: 120px;
+}
+
+.product-feature {
+    font-size: 13px;
+    line-height: 18px;
+    color: #54534a;
+    font-weight: 400;
+}
+
+.icon-flexb {
+    padding: 4px 0px;
+}
+
+.icon-image {
+    width: 24px;
+    height: 24px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.product-card {
+    flex-basis: calc(25% - 20px);
+    text-align: center;
+    margin: 24px auto;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: white; /* White background */
+    border-radius: 2px; /* Border radius */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    object-fit: cover;
+    background: linear-gradient(to bottom, white, #fafaf8); /* Gradient background */
+}
+
+.product-name {
+    font-size: 18px;
+    color: #3b4c66;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 14px;
+    line-height: 22px;
+    color: #54534a;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.buy-button {
+    background-image: linear-gradient(to right, #d6c28f, #a88b58, #d6c28f);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 2px;
+    font-family: 'New Baskerville', serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: auto; /* Align buy button at the bottom of the product card */
+    text-decoration: none; /* Remove default button underline */
+    display: inline-block; /* Make it behave like a block element */
+    width: 100%;  /* Makes the button take the full width of the a tag */
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
+}
+
+.buy-button-link {
+    display: block;
+    text-decoration: none;  /* Removes underline */
+    color: inherit;  /* Inherits color from parent element */
+}
+
+.buy-button-link:visited {
+    color: inherit;
+}
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .product-card {
+        flex-basis: calc(33.33% - 20px);
+    }
+    .mainflexbox-bigproduct {
+        flex-direction: column;
+        align-items: center;  /* Center the child elements */
+    }
+
+    .big-product-description {
+        font-size: 16px;
+        line-height: 24px;
+        color: #54534a;
+        font-weight: 400;
+        max-width: 80vw;
+    }
+
+    .specs-grid {
+        gap: 24px 12px;
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex-basis: calc(50% - 20px);
+    }
+
+    .benefits-card {
+        flex-basis: calc(50% - 16px);
+    }
+
+    .tour-card {
+        flex-basis: 100%;
+    }    
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex-basis: 100%;
+    }
+
+    .benefits-card {
+        flex-basis: 100%;
+    }
+
+    .tour-card {
+        flex-basis: 100%;
+    }
+}
+
